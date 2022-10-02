@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from trainers.models import Trainers
 from profiles.models import UserProfile
 
@@ -9,7 +10,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(Trainers, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     created_on = models.DateField(auto_now_add=True)
     featured_image = models.ImageField(default="blog_placeholder")
     content = models.TextField()

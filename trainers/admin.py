@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Trainers
 
-# Register your models here.
+
+@admin.register(Trainers)
+class TrainersAdmin(admin.ModelAdmin):
+    list_display = (
+        'trainer_name',
+        'trainer_email',
+    )
