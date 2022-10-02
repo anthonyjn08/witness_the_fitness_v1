@@ -7,6 +7,12 @@ class Trainers(models.Model):
     trainer_phone_number = models.CharField(max_length=20, null=False, blank=False)
     trainer_bio = models.TextField(null=False)
     trainer_image = models.ImageField(default="trainer_placholder")
+    trainer_category = models.CharField(max_length=20, blank=False, null=True)
 
     def __str__(self):
         return self.trainer_name
+
+    class Meta:
+        db_table = 'Trainers'
+        # Add verbose name
+        verbose_name = 'Trainer'
