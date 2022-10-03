@@ -1,4 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
 
@@ -34,7 +43,7 @@
                                     <img class="card-img-top"
                                         src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="recipe-image">
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="post-image">
                                     {% endif %}
                                     <div class="image-flash">
                                         <p class="author index-brand">Author: <span class="caveat-text">{{ post.author }}</span></p>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12 left">
+            <div class="row">
+            {% for trainer in trainers_list %}
+                <div class="col-md-4 mt-2 mb-2">
+                    <div class="index-card mb-4 h-100">
+                        <div class="card-body justify-content-md-center">
+                            <a href="" class="post-link">
+                                <div class="brand text-center">
+                                    <h2>{{ trainer.trainer_name }}</h2>
+                                </div>
+                                <div class="image-container">
+                                    {% if "trainer_placeholder" in post.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ trainers.trainer_image.url }}" alt="trainer-image">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author index-brand">{{ trainers.trainer_bio }}</p>
+                                    </div>
+                                </div>
+                                <p class="card-text text-center index-brand">{{ trainer.trainer_category }}</p>
+                            </a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+            {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
