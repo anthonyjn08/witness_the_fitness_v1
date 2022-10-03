@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid mt-5">
+
+    <!-- Trainer -->
+    <div class="row">
+        <div class="col-4">
+            {% if "trainer_placeholder" in trainer.trainer_image.url %}
+                <img class="card-img-top"
+                    src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
+                {% else %}
+                <img class="card-img-top" src="{{ trainer.trainer_image.url }}" alt="trainer-image">
+            {% endif %}
+        </div>
+        <div class="col-6">
+            <h2 class="brand">{{ trainer.trainer_name }}</h2>
+            <h3>{{ trainer.trainer_category }}</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-md-1">
+            <div>{{ trainer.trainer_bio | safe }}</div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

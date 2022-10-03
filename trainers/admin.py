@@ -8,3 +8,4 @@ class TrainersAdmin(admin.ModelAdmin):
         'trainer_name',
         'trainer_email',
     )
+    prepopulated_fields = {'slug': ('trainer_name',)}
