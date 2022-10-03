@@ -24,15 +24,12 @@
                                     <h2>{{ trainer.trainer_name }}</h2>
                                 </div>
                                 <div class="image-container">
-                                    {% if "trainer_placeholder" in post.featured_image.url %}
+                                    {% if "trainer_placeholder" in trainer.trainer_image.url %}
                                     <img class="card-img-top"
                                         src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ trainers.trainer_image.url }}" alt="trainer-image">
+                                    <img class="card-img-top" src="{{ trainer.trainer_image.url }}" alt="trainer-image">
                                     {% endif %}
-                                    <div class="image-flash">
-                                        <p class="author index-brand">{{ trainers.trainer_bio }}</p>
-                                    </div>
                                 </div>
                                 <p class="card-text text-center index-brand">{{ trainer.trainer_category }}</p>
                             </a>

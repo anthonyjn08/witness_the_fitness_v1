@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid mt-5">
+
+    <!-- Post -->
+    <div class="row">
+        <div class="col-4">
+            {% if "placeholder" in post.featured_image.url %}
+            <img class="card-img-top" src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg"
+                alt="placeholder">
+            {% else %}
+            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="post-image">
+            {% endif %}
+        </div>
+        <div class="col-6">
+            <h2 class="brand">{{ post.title }}</h2>
+            <p>Post by {{ post.author }} on {{ post.created_on }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-md-1">
+            <div>{{ post.content | safe }}</div>
+        </div>
+    </div>
+    
+
+    <!-- Likes Button -->
+    <div class="row">
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ total_comments}}
+            </strong>
+            {% endwith %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

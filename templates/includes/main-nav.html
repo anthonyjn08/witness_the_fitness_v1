@@ -1,15 +1,9 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="trainers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'trainers' %}" id="trainers-link">
                 Trainers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="trainers-link">
-                <!-- <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a> -->
-            </div>
         </li>
 
         <li class="nav-item dropdown">
@@ -25,7 +19,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog' %}" id="blog-link">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog' %}" id="blog-link">
                 Blog
             </a>
         </li>
