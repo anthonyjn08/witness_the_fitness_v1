@@ -10,4 +10,4 @@ class Classes(models.Model):
     class_image = models.ImageField(default='placeholder')
 
     def __str__(self):
-        return self.sport
+        return self.class_sport
