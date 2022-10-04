@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- Delete Post -->
+<div class="container">
+    {% if request.user == post.author %}
+    <div class="row mt-4 justify-content-md-center">
+        <div class="col-6">
+            <h1>Are You Sure?</h1>
+            <p>You are about to delete recipe <strong>{{ post.title }}</strong>. Once you press delete, this can not be undone.</p>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    {% else %}
+    <p>You do not have permission to view this page.</p>
+    <div class="container text-center">
+        <a href="{% url 'blog' %}" class="btn btn-danger btn-default">Back</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
