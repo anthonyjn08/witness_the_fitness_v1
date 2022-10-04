@@ -52,13 +52,15 @@
         <div class="col-6">
             <h5>Update or Delete your Post:</h5>
             <p class="edit-delete">
-                <a href="{% url 'edit_recipe' recipe.slug %}"><button class="btn btn-outline-success edit-recipe"><i
+                <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-outline-success edit-recipe"><i
                             class="fa-solid fa-pen-to-square"></i> Edit</button></i></a>
-                <a href="{% url 'delete_recipe' recipe.slug %}"><button class="btn btn-outline-danger"><i
+                <a href="{% url 'delete_post' post.slug %}"><button class="btn btn-outline-danger"><i
                             class="fa-solid fa-dumpster"></i> Delete</button></a>
             </p>
         </div>
     </div>
+    {% endif %}
+    {% endif %}
 </div>
 
 

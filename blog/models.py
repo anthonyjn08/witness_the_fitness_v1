@@ -1,8 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 from trainers.models import Trainers
 from profiles.models import UserProfile
 
+slug = models.SlugField()
 
 STATUS = ((0, "Draft"), (1, "Published"))
 

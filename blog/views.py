@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
-from .forms import RecipeForm
+from .forms import PostForm
 
 
 @login_required
@@ -21,13 +22,13 @@ def add_post(request):
             post_form.author = request.user
             post_form.status = 1
             post_form.save()
-            return redirect(reverse('blog/posts.html'))
+            return redirect(reverse('blog/'))
 
     context = {
         'post_form': post_form
     }
 
-    return render(request, 'add_post.html', context)
+    return render(request, 'blog/add_post.html', context)
 
 
 class EditPost(UpdateView):
@@ -36,8 +37,8 @@ class EditPost(UpdateView):
     """
     model = Post
     form_class = PostForm
-    template_name = 'edit_post.html'
-    success_url = '/'
+    template_name = 'blog/edit_post.html'
+    success_url = 'blog/'
 
 
 class DeletePost(DeleteView):
@@ -45,7 +46,7 @@ class DeletePost(DeleteView):
     View for deletion of recipe.
     """
     model = Post
-    template_name = 'delete_post.html'
+    template_name = 'blog/delete_post.html'
     success_url = reverse_lazy('blog')
 
 

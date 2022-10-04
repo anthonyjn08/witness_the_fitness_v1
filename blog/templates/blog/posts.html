@@ -21,6 +21,12 @@
             {% else %}
                 <h1><span class="brand">The Witness The Fitness Blog</span></h1>
             {% endif %}
+            {% if user.is_superuser %}
+                <p class="edit-delete">
+                    <a href="{% url 'add_post' %}"><button class="btn btn-outline-success edit-recipe"><i
+                                class="fa-solid fa-pen-to-square"></i> Add Post</button></i></a>
+                </p>
+            {% endif %}
         </div>
     </div>
 </div>
