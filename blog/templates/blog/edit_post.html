@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<!-- Edit Recipe -->
+<div class="container">
+    {% if user.id == post.author.id %}
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12">
+            <h5>Update Your Post</h5>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3 mb-5">
+        <div class="col-md-5 col-sm-12">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-grid gap-2">
+                    <input type="submit" class="btn btn-success mt-3" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-6">
+            <p>You do not have permission to view this page.</p>
+            <a href="{% url 'blog' %}" class="btn btn-danger btn-default">Back</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
