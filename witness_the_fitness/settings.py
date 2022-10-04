@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'trainers',
     'profiles',
     'blog',
+    'classes',
 
     # Other 
     'crispy_forms',

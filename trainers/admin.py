@@ -5,6 +5,7 @@ from .models import Trainers
 @admin.register(Trainers)
 class TrainersAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'trainer_name',
         'trainer_email',
     )
