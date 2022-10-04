@@ -1,6 +1,32 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
+from .forms import RecipeForm
+
+
+@login_required
+def add_post(request):
+    """
+    View to add recipe.
+    """
+    print(request.user)
+    post_form = PostForm(request.POST, request.FILES)
+
+    if request.method == 'POST':
+        if post_form.is_valid():
+            post_form = post_form.save(commit=False)
+            post_form.title = post_form.title
+            post_form.author = request.user
+            post_form.status = 1
+            post_form.save()
+            return redirect(reverse('blog/posts.html'))
+
+    context = {
+        'post_form': post_form
+    }
+
+    return render(request, 'add_post.html', context)
 
 
 class PostList(generic.ListView):
