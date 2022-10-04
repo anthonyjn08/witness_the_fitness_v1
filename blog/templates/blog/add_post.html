@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<!-- Recipe Form -->
+<div class="container mt-5">
+    <h1 class="text-center">Add Post</h1>
+    <div class="row">
+        <div class="col">
+            <form action="{% url 'add_post' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ post_form | crispy }}
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
