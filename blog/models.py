@@ -23,9 +23,15 @@ class Post(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+
+    prepopulated_fields = {'slug': slugify}
     
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
 
     def number_of_likes(self):
         return self.likes.count()

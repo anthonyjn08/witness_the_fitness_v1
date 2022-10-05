@@ -22,7 +22,7 @@ def add_post(request):
             post_form.author = request.user
             post_form.status = 1
             post_form.save()
-            return redirect(reverse('blog/'))
+            return redirect(reverse('blog'))
 
     context = {
         'post_form': post_form
@@ -38,7 +38,7 @@ class EditPost(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/edit_post.html'
-    success_url = 'blog/'
+    success_url = '/blog/'
 
 
 class DeletePost(DeleteView):

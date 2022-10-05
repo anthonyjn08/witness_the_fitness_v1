@@ -11,3 +11,6 @@ class Classes(models.Model):
 
     def __str__(self):
         return self.class_sport
+    
+    class Meta:
+        verbose_name_plural = 'Classes'
