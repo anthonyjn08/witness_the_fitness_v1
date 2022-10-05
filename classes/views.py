@@ -10,4 +10,4 @@ def all_classes(request):
         'classes': classes
     }
 
-    return render(request, 'classes/classes.html', context)
+    return render(request, 'classes/classes.html/', context)
