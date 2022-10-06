@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Sports
 
-# Create your views here.
+
+def all_sports(request):
+
+    sports = Sports.objects.all()
+
+    context = {
+        'sports': sports
+    }
+
+    return render(request, 'sports/sports.html/', context)
