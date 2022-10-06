@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'trainers',
     'profiles',
     'blog',
-    'classes',
     'sports',
 
     # Other 
