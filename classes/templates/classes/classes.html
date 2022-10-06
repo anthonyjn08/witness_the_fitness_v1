@@ -26,14 +26,14 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if class.class_image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ class.class_image.url }}" alt="{{ class.class_category }}">
-                                </a>
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ class.class_image.url }}" alt="{{ class.class_category }}">
+                                    </a>
                                 {% else %}
-                                <a href="">
-                                    <img class="card-img-top"
-                                        src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
-                                </a>
+                                    <a href="">
+                                        <img class="card-img-top"
+                                            src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
+                                    </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ class.class_category }}</p>
