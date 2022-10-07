@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <class class="overlay"></class>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container">
+                    {% if sport.sport_image %}
+                        <a href="{{ sport.sport_image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ sport.sport_image.url }}" alt="{{ sport.sport_category }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-img-top"
+                                src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <p class="mb-0">{{ sport.sport_category }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">${{ sport.sport_cost }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
