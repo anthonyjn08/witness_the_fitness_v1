@@ -39,28 +39,28 @@
             <div class="row">
             {% for post in post_list %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card mb-4 h-100">
-                        <div class="card-body justify-content-md-center">
+                    <div class="card mb-4 h-100 text-center">
+                        <div class="card-title">
+                            <h2>{{ post.title }}</h2>
+                        </div>
+                        {% if "placeholder" in post.featured_image.url %}
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <div class="brand text-center">
-                                    <h2>{{ post.title }}</h2>
-                                </div>
-                                <div class="image-container">
-                                    {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="post-image">
-                                    {% endif %}
-                                    <div class="image-flash">
-                                        <p class="author index-brand">Author: <span class="caveat-text">{{ post.author }}</span></p>
-                                    </div>
-                                </div>
-                                <p class="card-text text-center index-brand">{{ post.excerpt }}</p>
+                                <img class="card-img-top img-fluid"
+                                    src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
                             </a>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ post.created_on }} <i
-                                class="far fa-heart"></i>{{ post.number_of_likes }}</p>
+                        {% else %}
+                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                <img class="card-img-top img-fluid" src=" {{ post.featured_image.url }}" alt="post-image">
+                            </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="author index-brand">Author: {{ post.author }}</p>
+                            <p class="card-text text-center index-brand">{{ post.excerpt }}</p>
+                            
+                        </div>
+                        
+                        <div class="card-footer">
+                            <p class="card-text text-muted h6">{{ post.created_on }}</p>
                         </div>
                     </div>
                 </div>

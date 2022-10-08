@@ -6,6 +6,7 @@ from .models import Sports
 
 def all_sports(request):
     """ A view to show all sports """
+
     sports = Sports.objects.all()
     query = None
 
@@ -14,7 +15,7 @@ def all_sports(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('classes'))
+                return redirect(reverse('sports'))
             
             queries = Q(sport_category__icontains=query) | Q(sport_description__icontains=query)
             sports = sports.filter(queries)
