@@ -15,7 +15,13 @@
 
     <!-- Post -->
     <div class="row">
-        <div class="col-4">
+        <div class="col-6 offset-3 text-center">
+            <h2 class="brand">{{ post.title }}</h2>
+            <p>Post by {{ post.author }} on {{ post.created_on }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4">
             {% if "placeholder" in post.featured_image.url %}
             <img class="card-img-top" src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg"
                 alt="placeholder">
@@ -23,13 +29,9 @@
             <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="post-image">
             {% endif %}
         </div>
-        <div class="col-6">
-            <h2 class="brand">{{ post.title }}</h2>
-            <p>Post by {{ post.author }} on {{ post.created_on }}</p>
-        </div>
     </div>
     <div class="row">
-        <div class="col-10 offset-md-1">
+        <div class="col-8 offset-2">
             <div>{{ post.content | safe }}</div>
         </div>
     </div>
