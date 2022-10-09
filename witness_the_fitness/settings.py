@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0=cj@4z+6(lm8w8d3c$3-g@ds#god@!$uv*=pab)&82g1e!4t-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['witness-the-fitness-ajn.herokuapp.com', 'localhost']
 
 
 # Application definition
