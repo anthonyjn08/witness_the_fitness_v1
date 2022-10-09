@@ -10,7 +10,7 @@ from .forms import PostForm
 @login_required
 def add_post(request):
     """
-    View to add recipe.
+    View to add a blog post.
     """
     print(request.user)
     post_form = PostForm(request.POST, request.FILES)
@@ -43,7 +43,7 @@ class EditPost(UpdateView):
 
 class DeletePost(DeleteView):
     """
-    View for deletion of recipe.
+    View for deletion of blog post.
     """
     model = Post
     template_name = 'blog/delete_post.html'
