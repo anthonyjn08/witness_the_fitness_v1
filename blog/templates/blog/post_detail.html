@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-6 offset-3 text-center">
             <h2 class="brand">{{ post.title }}</h2>
-            <p>Post by {{ post.author }} on {{ post.created_on }}</p>
+            <p>Post by <strong>{{ post.author }}</strong> on {{ post.created_on }}</p>
         </div>
     </div>
     <div class="row">
@@ -35,18 +35,7 @@
             <div>{{ post.content | safe }}</div>
         </div>
     </div>
-    
 
-    <!-- Likes Button -->
-    <div class="row">
-        <div class="col-1">
-            {% with comments.count as total_comments %}
-            <strong class="text-secondary"><i class="far fa-comments"></i>
-                {{ total_comments}}
-            </strong>
-            {% endwith %}
-        </div>
-    </div>
     <!-- Update/Delete Post -->
     {% if user.is_superuser %}
     {% if user.id == post.author.id %}

@@ -1,15 +1,9 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="classes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'sports' %}?category=yoga,pt,bootcamp" id="classes-link">
                 Classes
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="classes-link">
-                <a href="{% url 'sports' %}?sport_type=yoga" class="dropdown-item">Yoga</a>
-                <a href="{% url 'sports' %}?sport_type=pt" class="dropdown-item">Personal Training</a>
-                <a href="{% url 'sports' %}?sport_type=bootcamp" class="dropdown-item">Bootcamp</a>
-                <a href="{% url 'sports' %}?category=yoga,pt,bootcamp" class="dropdown-item">All Classes</a>
-            </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'trainers' %}" id="trainers-link">

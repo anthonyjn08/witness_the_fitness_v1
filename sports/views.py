@@ -5,7 +5,7 @@ from .models import Sports
 
 
 def all_sports(request):
-    """ A view to show all sports """
+    """ A view to show all classes and searches """
 
     sports = Sports.objects.all()
     query = None
@@ -29,7 +29,7 @@ def all_sports(request):
 
 
 def sport_detail(request, sport_id):
-    """ A view to show each class type """
+    """ A view to show the detail of each class type """
     
     sport = get_object_or_404(Sports, pk=sport_id)
 
