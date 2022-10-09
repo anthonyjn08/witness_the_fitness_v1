@@ -59,7 +59,7 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     """
-    Recipe detail view to display full recipe when clicked on.
+    Post detail view to display blog post when clicked on.
     """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
