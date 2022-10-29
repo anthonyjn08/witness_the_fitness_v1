@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0=cj@4z+6(lm8w8d3c$3-g@ds#god@!$uv*=pab)&82g1e!4t-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['witness-the-fitness-ajn.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'sports',
+    'bag',
 
     # Other 
     'crispy_forms',
@@ -79,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'bag.contexts.bag_contents',
             ],
         },
     },
