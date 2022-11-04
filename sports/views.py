@@ -34,7 +34,7 @@ def sport_detail(request, sport_id):
     sport = get_object_or_404(Sports, pk=sport_id)
 
     context = {
-        'sport': sport
+        'sport': sport,
     }
 
     return render(request, 'sports/sport_detail.html', context)
