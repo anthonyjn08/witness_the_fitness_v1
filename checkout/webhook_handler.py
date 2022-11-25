@@ -51,7 +51,7 @@ class StripeWH_Handler:
                     street_address1__iexact=billing_details.address.line1,
                     street_address2__iexact=billing_details.address.line2,
                     county__iexact=billing_details.address.state,
-                    total=total,
+                    order_total=total,
                     original_bag=bag,
                     stripe_pid=pid,
                 )
@@ -70,7 +70,7 @@ class StripeWH_Handler:
                 order = Order.objects.create(
                     full_name=billing_details.name,
                     email=billing_details.email,
-                    phone_number=billing_details.phone_number,
+                    phone_number=billing_details.phone,
                     country=billing_details.address.country,
                     postcode=billing_details.address.postal_code,
                     town_or_city=billing_details.address.city,
