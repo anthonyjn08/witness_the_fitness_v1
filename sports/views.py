@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+
 from .models import Sports
+from .forms import SportForm
 
 
 def all_sports(request):
@@ -38,3 +40,14 @@ def sport_detail(request, sport_id):
     }
 
     return render(request, 'sports/sport_detail.html', context)
+
+
+def add_sport(request):
+    """ Add sports to the store """
+    form = SportForm()
+    template = 'sports/add_sport.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

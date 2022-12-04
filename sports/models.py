@@ -1,6 +1,7 @@
 from django.db import models
 from trainers.models import Trainers
 
+
 class Sports(models.Model):
     trainer_id = models.ForeignKey(Trainers, on_delete=models.CASCADE)
     sport_type = models.CharField(max_length=100, null=False, blank=False)

@@ -1,0 +1,17 @@
+from django import forms
+from .models import Sports
+
+
+class SportForm(forms.ModelForm):
+
+    class Meta:
+        model = Sports
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        categories = Sports.sport_category
+
+    #     self.fields['category'].choices = categories
+    #     for field_name, field in self.field.items():
+    #         field.widget.attrs['class'] = 'border-black rounded-0'
