@@ -1,0 +1,17 @@
+Hello {{ order.full_name }}
+
+TThank you for your order. Please see below for your order information:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Your Phone Number: {{ order.phone_number }}
+
+Your instructor will be in contact shortly.
+
+If you have any questions, please contact us at {{ contact_email }}
+
+Regards,
+
+Witness The Fitness
