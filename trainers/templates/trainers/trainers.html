@@ -23,14 +23,15 @@
                             </div>
                             <div class="card-body justify-content-md-center">
                                 <div class="image-container">
-                                    {% if "trainer_placeholder" in trainer.trainer_image.url %}
-                                        <a href="{% url 'trainer_detail' trainer.slug %}" class="post-link">
-                                            <img class="card-img-top"
-                                                src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
-                                        </a>
-                                    {% else %}
+                                    {% if trainer.trainer_image %}
                                         <a href="{% url 'trainer_detail' trainer.slug %}" class="post-link">
                                             <img class="card-img-top" src="{{ trainer.trainer_image.url }}" alt="trainer-image">
+                                        </a>
+                                        
+                                    {% else %}
+                                        <a href="{% url 'trainer_detail' trainer.slug %}" class="post-link">
+                                            <img class="card-img-top"
+                                                src="{{ MEDIA_URL }}noimage.png" alt="placeholder">
                                         </a>
                                     {% endif %}
                                 </div>

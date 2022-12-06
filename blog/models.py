@@ -14,7 +14,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     created_on = models.DateField(auto_now_add=True)
-    featured_image = models.ImageField(default="blog_placeholder")
+    featured_image = models.ImageField(null=True, blank=True)
     content = models.TextField()
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)

@@ -44,7 +44,16 @@ def sport_detail(request, sport_id):
 
 def add_sport(request):
     """ Add sports to the store """
-    form = SportForm()
+    if request.method == 'POST':
+        form = SportForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added Sport')
+            return redirect(reverse('add_sport'))
+        else:
+            messages.error(request, 'Failed to add sport. Please make sure the form is valid')
+    else:
+        form = SportForm()
     template = 'sports/add_sport.html'
     context = {
         'form': form,

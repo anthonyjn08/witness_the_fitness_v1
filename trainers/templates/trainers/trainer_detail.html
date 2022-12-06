@@ -16,11 +16,10 @@
     <!-- Trainer -->
     <div class="row">
         <div class="col-4">
-            {% if "trainer_placeholder" in trainer.trainer_image.url %}
-                <img class="card-img-top"
-                    src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg" alt="placeholder">
-                {% else %}
+            {% if trainer.trainer_image.url %}
                 <img class="card-img-top" src="{{ trainer.trainer_image.url }}" alt="trainer-image">
+            {% else %}
+                <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="trainer-image">
             {% endif %}
         </div>
         <div class="col-6">

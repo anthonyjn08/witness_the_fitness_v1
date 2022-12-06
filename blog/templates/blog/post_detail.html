@@ -22,11 +22,10 @@
     </div>
     <div class="row">
         <div class="col-4 offset-4">
-            {% if "placeholder" in post.featured_image.url %}
-            <img class="card-img-top" src="https://res.cloudinary.com/anthonyjn08/image/upload/v1657147325/placeholder_i1ysim.jpg"
-                alt="placeholder">
-            {% else %}
+            {% if post.featured_image %}
             <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="post-image">
+            {% else %}
+            <img class="card-img-top" src=" {{ MEDIA_URL }}noimage.png" alt="post-image">
             {% endif %}
         </div>
     </div>
