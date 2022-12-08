@@ -47,9 +47,9 @@ def add_sport(request):
     if request.method == 'POST':
         form = SportForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            sport = form.save()
             messages.success(request, 'Successfully added Sport')
-            return redirect(reverse('add_sport'))
+            return redirect(reverse('sport_detail', args=[sport.id]))
         else:
             messages.error(request, 'Failed to add sport. Please make sure the form is valid')
     else:
@@ -84,3 +84,11 @@ def edit_sport(request, sport_id):
     }
 
     return render(request, template, context)
+
+
+def delete_sport(request, sport_id):
+    """ Delete a sport """
+    sport = get_object_or_404(Sports, pk=sport_id)
+    sport.delete()
+    messages.success(request, 'Sport deleted!')
+    return redirect(reverse('sports'))
