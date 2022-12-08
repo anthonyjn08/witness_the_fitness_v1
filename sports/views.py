@@ -60,3 +60,27 @@ def add_sport(request):
     }
 
     return render(request, template, context)
+
+
+def edit_sport(request, sport_id):
+    """ Edit a sport """
+    sport = get_object_or_404(Sports, pk=sport_id)
+    if request.method == 'POST':
+        form = SportForm(request.POST, request.FILES, instance=sport)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated sport')
+            return redirect(reverse('sport_detail', args=[sport.id]))
+        else:
+            messages.error(request, 'Failed to update sport. Please ensure the form is valid')
+    else:
+        form = SportForm(instance=sport)
+        messages.info(request, f'You are editing {sport.sport_category}')
+
+    template = 'sports/edit_sport.html'
+    context = {
+        'form': form,
+        'sport': sport,
+    }
+
+    return render(request, template, context)
