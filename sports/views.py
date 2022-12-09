@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
 from .models import Sports
@@ -42,8 +43,13 @@ def sport_detail(request, sport_id):
     return render(request, 'sports/sport_detail.html', context)
 
 
+@login_required
 def add_sport(request):
     """ Add sports to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = SportForm(request.POST, request.FILES)
         if form.is_valid():
@@ -62,8 +68,13 @@ def add_sport(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_sport(request, sport_id):
     """ Edit a sport """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
+        return redirect(reverse('home'))
+
     sport = get_object_or_404(Sports, pk=sport_id)
     if request.method == 'POST':
         form = SportForm(request.POST, request.FILES, instance=sport)
@@ -86,8 +97,13 @@ def edit_sport(request, sport_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_sport(request, sport_id):
     """ Delete a sport """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
+        return redirect(reverse('home'))
+
     sport = get_object_or_404(Sports, pk=sport_id)
     sport.delete()
     messages.success(request, 'Sport deleted!')
