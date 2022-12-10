@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
