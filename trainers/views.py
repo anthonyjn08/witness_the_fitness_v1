@@ -8,7 +8,7 @@ class TrainerList(generic.ListView):
     A view to show all trainers.
     """
     model = Trainers
-    queryset = Trainers.objects.all()
+    queryset = Trainers.objects.all().order_by('trainer_category')
     template_name = 'trainers/trainers.html'
     paginate_by = 6
 
@@ -21,10 +21,9 @@ class TrainerDetail(View):
         queryset = Trainers.objects.all()
         trainer = get_object_or_404(queryset, slug=slug)
         
-        return render(
-            request,
-            "trainers/trainer_detail.html",
-            {
-                "trainer": trainer,
-            },
-        )
+        template = "trainers/trainer_detail.html"
+        context = {
+            "trainer": trainer,
+        }
+        
+        return render(request, template, context)

@@ -4,7 +4,7 @@ from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
-from .forms import PostForm
+from .forms import PostForm, CommentForm
 
 
 @login_required
@@ -75,6 +75,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm(),
             },
         )
