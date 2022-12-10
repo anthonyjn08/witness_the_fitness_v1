@@ -9,11 +9,10 @@ class SportForm(forms.ModelForm):
         model = Sports
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    sport_image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        categories = Sports.sport_category
 
     #     self.fields['category'].choices = categories
     #     for field_name, field in self.field.items():
