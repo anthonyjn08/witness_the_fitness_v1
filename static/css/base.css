@@ -161,6 +161,20 @@ input[name='q']::placeholder {
     border-bottom-color: #343a40 !important;
 }
 
+/* Blog page */
+
+.index-card {
+    border: 1px solid #000000;
+    background-color: transparent;
+}
+
+/* Blog post detail */
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
