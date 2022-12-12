@@ -1,0 +1,1 @@
+web: gunicorn witness_the_fitness.wsgi:application
