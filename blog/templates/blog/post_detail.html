@@ -35,6 +35,38 @@
         </div>
     </div>
 
+    <!-- Likes Button -->
+    <div class="row">
+        <div class="col-1">
+            <strong>
+                {% if user.is_authenticated %}
+                <form action="{% url 'post_like' post.slug %}" class="d-inline" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
+                            class="fas fa-heart"></i></button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn btn-like"><i
+                            class="far fa-heart"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                {% endif %}
+                <span class="text-secondary">{{ post.number_of_likes }}</span>
+            </strong>
+        </div>
+
+        <!-- Comment Count -->
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ total_comments}}
+            </strong>
+            {% endwith %}
+        </div>
+    </div>
+
     <!-- Update/Delete Post -->
     {% if user.is_superuser %}
     {% if user.id == post.author.id %}
@@ -51,7 +83,9 @@
     </div>
     {% endif %}
     {% endif %}
+    <hr>
 
+    <!-- Comments -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -66,7 +100,7 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
-                {% if request.user == comment.name %}
+                {% if request.user == comment.name or request.user.is_superuser %}
                 <a href="{% url 'delete_comment' comment.id %}"><button class="btn btn-outline-danger"><i
                     class="fa-solid fa-dumpster"></i> Delete</button></a>
                 {% endif %}
