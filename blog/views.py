@@ -109,3 +109,12 @@ class PostDetail(View):
         }
 
         return render(request, template, context)
+
+
+class DeleteComment(DeleteView):
+    """
+    Delete comment view.
+    """
+    model = Comment
+    template_name = 'blog/delete_comment.html'
+    success_url = reverse_lazy('blog')

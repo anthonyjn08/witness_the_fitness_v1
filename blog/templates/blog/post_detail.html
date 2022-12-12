@@ -66,6 +66,10 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
+                {% if request.user == comment.name %}
+                <a href="{% url 'delete_comment' comment.id %}"><button class="btn btn-outline-danger"><i
+                    class="fa-solid fa-dumpster"></i> Delete</button></a>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
