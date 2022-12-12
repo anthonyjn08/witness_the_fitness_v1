@@ -15,9 +15,15 @@
 <div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class=>Blog</h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-6 offset-md-3 text-center">
             {% if user.is_authenticated %}
-                <h1>Hi {{user.username}}</h1>
+                <p>Hi <strong>{{user.username}}</strong></p>
                 <p>Welcome to The Witness The Fitness Blog</p>
             {% else %}
                 <h1><span class="brand">The Witness The Fitness Blog</span></h1>

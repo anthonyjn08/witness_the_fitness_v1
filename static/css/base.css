@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: #034efc;
 }
 
 .main-logo-link {
@@ -306,5 +307,20 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+.del-com {
+    padding-top: 116px;
+}
+
+/* pad the top on really small screens */
+@media (max-width: 500px) {
+    .header-container {
+        padding-top: 136px;
+    }
+
+    body {
+        height: calc(100vh - 136px);
     }
 }
