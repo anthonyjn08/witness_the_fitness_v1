@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'sports',
+    'sponsors',
     'bag',
     'checkout',
 
