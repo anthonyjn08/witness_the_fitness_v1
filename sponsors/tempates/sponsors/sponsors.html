@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class=>Sponsor</h2>
+                <hr class="w-50 mb-1">
+                <p>Meet the our Sponsors</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 left">
+                <div class="row">
+                {% for sponsor in sponsors_list %}
+                    <div class="col-md-4 mt-2 mb-2">
+                        <div class="index-card mb-4 h-100 text-center">
+                            <div class="card-title">
+                                <h2>{{ sponsor.sponsor_name }}</h2>
+                            </div>
+                            <div class="card-body justify-content-md-center">
+                                <div class="image-container">
+                                    <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="sponsor-link" target="_blank">
+                                        <img class="card-img-top" src="{{ sponsor.sponsor_image.url }}" alt="sponsor-image">
+                                    </a>
+                                    <p>{{ sponsor.sponsor_bio }}</p>
+                                </div>
+                                <p class="card-footer">Visit {{ sponsor.sponsor_name }} <a rel="nofollow" href="{{ sponsor.sponsor_website }}"
+                                    class="sponsor-link" target="_blank">here</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
