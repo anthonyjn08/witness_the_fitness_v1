@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0=cj@4z+6(lm8w8d3c$3-g@ds#god@!$uv*=pab)&82g1e!4t-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://witness-the-fitness-ajn.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['witness-the-fitness-ajn.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -125,7 +125,7 @@ WSGI_APPLICATION = 'witness_the_fitness.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        default.dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
