@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}404 Error{% endblock %}
 
 {% block content %}
 
 <!-- 404 Error -->
+<div class="overlay"></div>
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -12,7 +14,6 @@
     </div>
     <div class="row">
         <div class="col-md-6 offset-md-3 mt-4">
-            <img src="{{ MEDIA_URL }}error.png" alt="error-404">
             <p>Something went wrong</p>
             <p>This page can not be found</p>
             <a href="{% url 'home' %}" class="btn btn-outline-success">Back to Safety</a>
