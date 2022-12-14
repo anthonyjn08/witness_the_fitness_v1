@@ -193,6 +193,10 @@ input[name='q']::placeholder {
     text-align: center;
 }
 
+.del-com {
+    padding-top: 116px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -334,6 +338,7 @@ input[name='q']::placeholder {
     .btn.btn-outline-black.rounded-0.btn-lg,
     .btn.btn-black.rounded-0.btn-lg {
         padding: 0.375rem 0.375rem;
+        font-size: 0.75rem;
     }
 
     .increment-qty, .decrement-qty {
@@ -347,8 +352,4 @@ input[name='q']::placeholder {
     .sport-desc {
         font-size: 0.8rem;
     }
-}
-
-.del-com {
-    padding-top: 116px;
 }

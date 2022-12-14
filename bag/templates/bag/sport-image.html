@@ -1,0 +1,5 @@
+{% if item.sport.sport_image %}
+<img class="img-fluid rounded" src="{{ item.sport.sport_image.url }}" alt="{{ item.sport.sport_category }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.sport.sport_category }}">
+{% endif %}
