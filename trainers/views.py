@@ -20,10 +20,10 @@ class TrainerDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Trainers.objects.all()
         trainer = get_object_or_404(queryset, slug=slug)
-        
+
         template = "trainers/trainer_detail.html"
         context = {
             "trainer": trainer,
         }
-        
+
         return render(request, template, context)

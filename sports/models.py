@@ -13,6 +13,6 @@ class Sports(models.Model):
 
     def __str__(self):
         return self.sport_type
-    
+
     class Meta:
         verbose_name_plural = 'Sports'
