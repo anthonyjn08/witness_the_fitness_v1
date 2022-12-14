@@ -13,3 +13,19 @@ TBC
 As part of the Agile process I created user stories to aid with planning for the project.
 
 **User**
+
+As a User,
+
+* I can view the different classes on offer.
+* I can click on a class and view more detail.
+* I can add choosen classes to a shopping bag.
+* I can view and update my shopping bag.
+* I can make purchases securely.
+* I can register to the site.
+* I can view and update my profile.
+* I can view my order history.
+* I can view blog posts.
+* I can like/unlike blog posts.
+* I can comment and delete my own comments on blog posts.
+* I can view the trainers and their bio's.
+* I can view sponsors.
