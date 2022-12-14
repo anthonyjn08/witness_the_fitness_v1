@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profile/
+Disallow: /admin/
+Disallow: /summernote/
+Sitemap: https://witness-the-fitness-ajn.herokuapp.com/sitemap.xml
