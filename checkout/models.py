@@ -40,8 +40,7 @@ class Order(models.Model):
         """
         Update grand total each time a line item is added
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))
-        ['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
@@ -78,4 +77,4 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'{self.sport.sport_category} on order \
-        {self.order.order_number}'
+            {self.order.order_number}'
