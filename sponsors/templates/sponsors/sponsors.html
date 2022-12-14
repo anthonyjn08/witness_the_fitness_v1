@@ -30,14 +30,17 @@
                             </div>
                             <div class="card-body justify-content-md-center">
                                 <div class="image-container">
-                                    <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="sponsor-link" target="_blank">
+                                    <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="post-link" target="_blank">
                                         <img class="card-img-top" src="{{ sponsor.sponsor_image.url }}" alt="sponsor-image">
                                     </a>
                                     <p>{{ sponsor.sponsor_bio }}</p>
                                 </div>
-                                <p class="card-footer">Visit {{ sponsor.sponsor_name }} <a rel="nofollow" href="{{ sponsor.sponsor_website }}"
-                                    class="sponsor-link" target="_blank">here</a>
-                                </p>
+                                <div class="card-footer">
+                                    <p>Visit {{ sponsor.sponsor_name }}
+                                        <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="post-link" target="_blank">
+                                            here</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
