@@ -8,6 +8,58 @@ TBC
 
 ## Planning
 
+### Wireframes
+
+During the planning stage, I created several wireframe templates based on how I wanted the site to look. These are below.
+
+#### **Home**
+
+*Homepage*
+
+![Homepage Wireframe](static/docs/wireframes/homepage-wf.png)
+
+#### **Blog**
+
+*Blog*
+
+![Blog Wireframe](static/docs/wireframes/blog-wf.png)
+
+*Blog Post Detail*
+
+![Blog Post Detail Wireframe](static/docs/wireframes/blog-post-wf.png)
+
+#### **Classes**
+
+*Classes*
+
+![Classes Wireframe](static/docs/wireframes/classes-wf.png)
+
+*Class Detail*
+
+![Class Detail Wireframe](static/docs/wireframes/class-detail-wf.png)
+
+#### **Trainers**
+
+*Trainers*
+
+![Trainers Wireframe](static/docs/wireframes/trainers-wf.png)
+
+*Trainer Detail*
+
+![Trainer Detail Wireframe](static/docs/wireframes/trainer-detail-wf.png)
+
+#### **Shopping Bag**
+
+*Shopping Bag*
+
+![Shopping Bag Wireframe](static/docs/wireframes/bag-wf.png)
+
+#### **Profile**
+
+*Profile*
+
+![Profile Wireframe](static/docs/wireframes/profile-wf.png)
+
 ### User Stories
 
 As part of the Agile process I created user stories to aid with planning for the project.
