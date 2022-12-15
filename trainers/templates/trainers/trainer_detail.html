@@ -25,14 +25,9 @@
         <div class="col-6">
             <h2 class="brand">{{ trainer.trainer_name }}</h2>
             <h3>{{ trainer.trainer_category }}</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-10 offset-md-1">
-            <div>{{ trainer.trainer_bio | safe }}</div>
+            <p>{{ trainer.trainer_bio | safe }}</p>
         </div>
     </div>
 </div>
-
 
 {% endblock %}
