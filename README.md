@@ -41,3 +41,52 @@ As an **Admin**
 * I can add new classes(products).
 * I can update/delete existing classes(products).
 * I can delete user blog comments if inappropriate.
+
+## Database Models
+
+There are several database Models created for the site and the different apps within it.
+
+### Blog App
+
+#### Post Model
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    created_on = models.DateField(auto_now_add=True)
+    featured_image = models.ImageField(null=True, blank=True)
+    content = models.TextField()
+    excerpt = models.TextField(blank=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(UserProfile, related_name="post_likes", blank=True)
+
+#### Comment Model
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
+    name = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_comments")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+### Checkout App
+
+#### Order Model
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+
+#### OrderLineItem Model
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    sport = models.ForeignKey(Sports, null=False, blank=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
