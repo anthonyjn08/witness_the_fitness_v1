@@ -132,3 +132,26 @@ There are several database Models created for the site and the different apps wi
     trainer_bio = models.TextField(null=False)
     trainer_image = models.ImageField(null=True, blank=True)
     trainer_category = models.CharField(max_length=20, blank=False, null=True)
+
+## **Technologies Used**
+
+**Programming Languages**
+
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [Python](https://www.python.org/)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://www.javascript.com/)
+
+**Supporting Frameworks, Technologies and Credits**
+
+* [Django](https://www.djangoproject.com/) - the base of the project, used for logins, views, forms amongst other things.
+* [Bootstrap](https://getbootstrap.com/) - used for website design and responsiveness.
+* [Heroku](https://heroku.com) - used for hosting the website.
+* [Amazon AWS](https://aws.amazon.com/?nc2=h_lg) - for hosting static files and media.
+* [ElephantSQL](https://www.elephantsql.com/) - used for the postgres database.
+* [Mailchimp](https://mailchimp.com/) - for newsletter signup
+* [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to format forms across the site.
+* [Summernote](https://summernote.org/) - used for text input fields on the website to allow bullet points or numbered lists for fields like recipe instructions.
+* [Pixabay](https://pixabay.com/) - images I've used on the site have come from Pixabay.
+* [Google Fonts](https://fonts.google.com/) - used for font's on the site.
+* [Font Awesome](https://fontawesome.com/) - used for icons across the site.
