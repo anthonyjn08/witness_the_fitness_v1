@@ -14,7 +14,7 @@ As part of the Agile process I created user stories to aid with planning for the
 
 **User**
 
-As a User,
+As a **User**
 
 * I can view the different classes on offer.
 * I can click on a class and view more detail.
@@ -29,3 +29,15 @@ As a User,
 * I can comment and delete my own comments on blog posts.
 * I can view the trainers and their bio's.
 * I can view sponsors.
+
+**Admin**
+
+As well as having the same abilities as users, admins also have the additional User Stories.
+
+As an **Admin**
+
+* I can create blog posts.
+* I can update/delete blog posts.
+* I can add new classes(products).
+* I can update/delete existing classes(products).
+* I can delete user blog comments if inappropriate.
