@@ -185,6 +185,27 @@ There are several database Models created for the site and the different apps wi
     trainer_image = models.ImageField(null=True, blank=True)
     trainer_category = models.CharField(max_length=20, blank=False, null=True)
 
+## **Future Features**
+
+There are some features I would like to add to the site in the future. I actually intend to try and develop this further into a fully functioning website although, when I do this, the inital focus will be just on personal training.
+There are some features that I wanted to include when I first started the project but unfortunately I did not have the time to include these.
+There are also other features that I would like to include as I develop the site further. These features are listed here.
+
+* **Calendar Booking**
+    * I wanted to include a way to book purchased lessons/classes when I initially planned the project but unfortunately did not have the time to research or include this. Users would be able to book, cancel and rebook lessons. Admins/Trainers would be able to cancel and rebook lessons when needed.
+
+* **Social Login**
+    * Users would be able to use their social accounts such as google or facebook to register to the site. This was also another feature that I unfortunately did not have time to achieve.
+
+* **Fitness Tracking/Logging**
+    * Users would be able to list their fitness journey and would be able to log things such as weight and also specifically for Personal Training, they would be able to track their workouts including weight, reps and distance of their exercises. Where possible, I'd like to include graphs so users can see their journey graphically.
+
+* **Shop**
+    * An online shop where users can buy Witness The Fitness branded clothes and accessories and also other brands. There would also be giftcards for sale.
+
+* **Reviews/Ratings**
+    * Users would be able to leave reviews for the trainers and classes.
+
 ## **Technologies Used**
 
 **Programming Languages**
