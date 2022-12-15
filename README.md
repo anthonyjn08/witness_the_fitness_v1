@@ -185,6 +185,21 @@ There are several database Models created for the site and the different apps wi
     trainer_image = models.ImageField(null=True, blank=True)
     trainer_category = models.CharField(max_length=20, blank=False, null=True)
 
+## **Website Design**
+
+The sites design takes a lot of styling from the Code Institute Boutique Ado follow along lessons. I had used the lessons as a base for the website and intended on spending a lot of time styling and making the site look like my own. Unfortunately, due to family and work commitments I have not been able to dedicate enough time to this project to do this.
+
+### **Header and Footer**
+
+#### **Navbar**
+The navbar includes the site title, a search bar and links to various sections of the website including profiles and shopping bag. It is made up of bootstrap classes to aid responsiveness. The search bar allows users to search for the classes on the site.
+
+#### **Footer**
+The footer includes a message that the website is for educational purposes. It also features a mailchimp newsletter signup and links to the main areas of the website.
+
+### **Homepage**
+The landing page has a background image which presents a fitness feel to the site. There is a message to join one of the availlable classes and also a shopw now button so users can easily navigate to the classes on offer.
+
 ## **Future Features**
 
 There are some features I would like to add to the site in the future. I actually intend to try and develop this further into a fully functioning website although, when I do this, the inital focus will be just on personal training.
