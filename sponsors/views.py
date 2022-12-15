@@ -1,4 +1,4 @@
-from django.views import generic
+from django.views import generic, View
 from .models import Sponsors
 
 

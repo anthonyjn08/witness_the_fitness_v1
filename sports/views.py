@@ -17,14 +17,10 @@ def all_sports(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search \
-                    criteria!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('sports'))
-
-            queries = (
-                Q(sport_category__icontains=query) |
-                Q(sport_description__icontains=query)
-                )
+            
+            queries = Q(sport_category__icontains=query) | Q(sport_description__icontains=query)
             sports = sports.filter(queries)
 
     context = {
@@ -37,7 +33,7 @@ def all_sports(request):
 
 def sport_detail(request, sport_id):
     """ A view to show the detail of each class type """
-
+    
     sport = get_object_or_404(Sports, pk=sport_id)
 
     context = {
@@ -51,8 +47,7 @@ def sport_detail(request, sport_id):
 def add_sport(request):
     """ Add sports to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have permission to view \
-            this page!')
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -62,8 +57,7 @@ def add_sport(request):
             messages.success(request, 'Successfully added Sport')
             return redirect(reverse('sport_detail', args=[sport.id]))
         else:
-            messages.error(request, 'Failed to add sport. Please make sure \
-                the form is valid')
+            messages.error(request, 'Failed to add sport. Please make sure the form is valid')
     else:
         form = SportForm()
     template = 'sports/add_sport.html'
@@ -74,11 +68,11 @@ def add_sport(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_sport(request, sport_id):
     """ Edit a sport """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have permission to view \
-            this page!')
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
         return redirect(reverse('home'))
 
     sport = get_object_or_404(Sports, pk=sport_id)
@@ -89,8 +83,7 @@ def edit_sport(request, sport_id):
             messages.success(request, 'Successfully updated sport')
             return redirect(reverse('sport_detail', args=[sport.id]))
         else:
-            messages.error(request, 'Failed to update sport. Please ensure \
-                the form is valid')
+            messages.error(request, 'Failed to update sport. Please ensure the form is valid')
     else:
         form = SportForm(instance=sport)
         messages.info(request, f'You are editing {sport.sport_category}')
@@ -104,11 +97,11 @@ def edit_sport(request, sport_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_sport(request, sport_id):
     """ Delete a sport """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have permission to view \
-            this page!')
+        messages.error(request, 'Sorry, you do not have permission to view this page!')
         return redirect(reverse('home'))
 
     sport = get_object_or_404(Sports, pk=sport_id)

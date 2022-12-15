@@ -1,6 +1,4 @@
-from django.shortcuts import (
-    render, redirect, reverse, get_object_or_404, HttpResponse
-)
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -15,7 +13,6 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
-
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -28,8 +25,9 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        messages.error(request, 'Sorry, your payment cannot be'
-                       'processed right now. Please try again later.')
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        print(e)
         return HttpResponse(content=e, status=400)
 
 
@@ -71,24 +69,21 @@ def checkout(request):
                         order_line_item.save()
                 except Sports.DoesNotExist:
                     messages.error(request, (
-                        "One of the sports in your bag wasn't "
-                        "found in our database. "
+                        "One of the sports in your bag wasn't found in our database. "
                         "Please contact us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success',
-                            args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, ("There was an error with your form. "
-                                     "Please double check your information."))
+            messages.error(request, "There was an error with your form. \
+            Please double check your information.")
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request,
-                           "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('sports'))
 
         current_bag = bag_contents(request)
@@ -100,8 +95,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in
-        # their profile
+        # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -122,9 +116,8 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing.'
-                         'Did you forget to set it '
-                         'in your environment?')
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
@@ -168,7 +161,7 @@ def checkout_success(request, order_number):
 
     if 'bag' in request.session:
         del request.session['bag']
-
+    
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
