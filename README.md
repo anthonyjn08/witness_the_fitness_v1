@@ -212,6 +212,21 @@ The trainers page shows the different trainers on the site and their sport categ
 ### **Trainer Detail**
 The trainer detail page is opened when a user clicks on a trainer in the trainers view. This view displays a larger image of the trainer, name, sport category and their bio.
 
+### ** Blog**
+The blog page has similar styling to the products page in that each row is a grid of 4 cards. Each card has the post title, author, an image, a small excerpt and details on the date and amount of likes. There is a small message for registered users welcoming them to the blog. Users can view the blog posts, and if there more than 6 posts on a page, there are buttons for next and previous pages.
+
+### **Blog Post Detail**
+The post detail page opens up when a blog card is clicked on the blog view. This view has the title of the post and the author. There is an image and below there is the post content. At the bottom of this view users can view the amount of likes and comments on the post. Registered logged in users can then either like or unlike the post and also post their own comments. They can also delete their comments too.
+
+### **Sponsors**
+The sponsors page is also in a grid and card format. This page shows the sponsors of the site and a small bio of who they are and where they're based. The is also a link to their website which uses a rel attribute.
+
+### **My Profile**
+This page is accessed when registed users click on the my account icon in the header. The page is split into 2 sides. On the left hand side is their default billing information which can be updated here. On the right is the users order history. This displays the order number, date, items and total for the order. Users can click on an order number to see even more information for that order.
+
+### **Bag**
+This page shows what is currently in the users shopping bag. If this is empty it displays a message stating this and has a keep shopping button to take users back to the classes page. If there are items in a users bag they are displayed here. There is an image, the class category and a description. To the right of the page, there is the price and also a quantity field with + and - buttons to update this. Users have the option to update the quantity of a specific item or remove it from the bag.
+
 ## **Future Features**
 
 There are some features I would like to add to the site in the future. I actually intend to try and develop this further into a fully functioning website although, when I do this, the inital focus will be just on personal training.
