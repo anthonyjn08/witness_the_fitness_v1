@@ -200,6 +200,18 @@ The footer includes a message that the website is for educational purposes. It a
 ### **Homepage**
 The landing page has a background image which presents a fitness feel to the site. There is a message to join one of the availlable classes and also a shopw now button so users can easily navigate to the classes on offer.
 
+### **Classes**
+The classes page shows the classes on offer. It consists of a grid in rows of 4 cards. There is an image, category and price for each class on show. Users can click on a choosen class which will open up a more detailed page for that class.
+
+### **Class Detail**
+The class detail page is accessed when users click on a class in the classes view. This page has a large image for the class, the class category, price and a description of the class. Users can adjust the quantity they would like to purchase to a maximum limit of 5. There are also buttons to keep shopping and return to the classes page or to add the class to the bag in their chosen quantity. Adding an item to the bag reveals a toast popup which displays a message, highlights what's in the bag and a button to navigate to the checkout page.
+
+### **Trainers**
+The trainers page shows the different trainers on the site and their sport category. It is presented in a card like view with a grid of 3 per row. As more trainers are added I would update this to display in rows of 4 to fit in with the styling on the rest of the site.
+
+### **Trainer Detail**
+The trainer detail page is opened when a user clicks on a trainer in the trainers view. This view displays a larger image of the trainer, name, sport category and their bio.
+
 ## **Future Features**
 
 There are some features I would like to add to the site in the future. I actually intend to try and develop this further into a fully functioning website although, when I do this, the inital focus will be just on personal training.
@@ -207,7 +219,7 @@ There are some features that I wanted to include when I first started the projec
 There are also other features that I would like to include as I develop the site further. These features are listed here.
 
 * **Calendar Booking**
-    * I wanted to include a way to book purchased lessons/classes when I initially planned the project but unfortunately did not have the time to research or include this. Users would be able to book, cancel and rebook lessons. Admins/Trainers would be able to cancel and rebook lessons when needed.
+    * I wanted to include a way to book purchased lessons/classes when I initially planned the project but unfortunately did not have the time to research or include this. Users would be able to book, cancel and rebook lessons. Admins/Trainers would be able to cancel and rebook lessons when needed. Trainers would also be able to add days when classes are being run so users can only book on those days.
 
 * **Social Login**
     * Users would be able to use their social accounts such as google or facebook to register to the site. This was also another feature that I unfortunately did not have time to achieve.
@@ -220,6 +232,9 @@ There are also other features that I would like to include as I develop the site
 
 * **Reviews/Ratings**
     * Users would be able to leave reviews for the trainers and classes.
+
+* **Search Bar Capability**
+    * Currently the search bar only allows users to search for the classes on offer. I would like to update this so users can search for a wider range of items on the site, such as the various trainers or blog posts.
 
 ## **Technologies Used**
 
