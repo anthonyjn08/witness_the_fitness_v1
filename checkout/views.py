@@ -8,8 +8,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from sports.models import Sports
-from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
 import stripe
@@ -80,7 +80,7 @@ def checkout(request):
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
-                            args=[order.order_number]))
+                                    args=[order.order_number]))
         else:
             messages.error(request, ("There was an error with your form. "
                                      "Please double check your information."))
@@ -122,9 +122,9 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing.'
-                         'Did you forget to set it '
-                         'in your environment?')
+        messages.warning(request, ('Stripe public key is missing.'
+                                   'Did you forget to set it '
+                                   'in your environment?'))
 
     template = 'checkout/checkout.html'
     context = {

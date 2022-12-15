@@ -15,7 +15,3 @@ class SportForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
-    #     self.fields['category'].choices = categories
-    #     for field_name, field in self.field.items():
-    #         field.widget.attrs['class'] = 'border-black rounded-0'
