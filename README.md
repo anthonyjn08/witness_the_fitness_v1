@@ -90,3 +90,45 @@ There are several database Models created for the site and the different apps wi
     sport = models.ForeignKey(Sports, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+### Profiles App
+
+#### UserProfile
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
+
+### Sponsors App
+
+#### Sponsors
+    sponsor_name = models.CharField(max_length=100, null=False, blank=False)
+    sponsor_bio = models.TextField(null=False)
+    sponsor_image = models.ImageField(null=True, blank=True)
+    sponsor_website = models.TextField(null=False)
+
+### Sports App
+
+#### Sports
+    trainer_id = models.ForeignKey(Trainers, on_delete=models.CASCADE)
+    sport_type = models.CharField(max_length=100, null=False, blank=False)
+    sport_category = models.CharField(max_length=100, null=False, blank=False)
+    sport_description = models.TextField(blank=True)
+    sport_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
+    sport_location = models.CharField(max_length=100, null=False, blank=False)
+    sport_image = models.ImageField(null=True, blank=True)
+
+### Trainers App
+
+#### Trainers
+    trainer_name = models.CharField(max_length=100, null=False, blank=False)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
+    trainer_email = models.EmailField(max_length=254, null=False, blank=False)
+    trainer_phone_number = models.CharField(max_length=20, null=False, blank=False)
+    trainer_bio = models.TextField(null=False)
+    trainer_image = models.ImageField(null=True, blank=True)
+    trainer_category = models.CharField(max_length=20, blank=False, null=True)
