@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 
 from sports.models import Sports
@@ -20,7 +22,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated {sport.sport_category } quantity to {bag[item_id]}')
+        messages.success(request, f'Updated {sport.sport_category } quantity \
+            to {bag[item_id]}')
 
     else:
         bag[item_id] = quantity
@@ -39,10 +42,12 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Updated {sport.sport_category } quantity to {bag[item_id]}')
+        messages.success(request, f'Updated {sport.sport_category } quantity \
+            to {bag[item_id]}')
     else:
         bag.pop(item_id)
-        messages.success(request, f'Removed {sport.sport_category } from your bag')
+        messages.success(request, f'Removed {sport.sport_category } from your \
+            bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -56,7 +61,8 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
 
         bag.pop(item_id)
-        messages.success(request, f'Removed {sport.sport_category } from your bag')
+        messages.success(request, f'Removed {sport.sport_category } \
+            from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
