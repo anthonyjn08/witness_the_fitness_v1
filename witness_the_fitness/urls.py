@@ -35,4 +35,3 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'witness_the_fitness.views.handler404'
-handler500 = 'witness_the_fitness.views.handler500'
