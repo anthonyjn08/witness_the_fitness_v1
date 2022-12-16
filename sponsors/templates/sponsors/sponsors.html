@@ -30,9 +30,15 @@
                             </div>
                             <div class="card-body justify-content-md-center">
                                 <div class="image-container">
-                                    <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="post-link" target="_blank">
-                                        <img class="card-img-top" src="{{ sponsor.sponsor_image.url }}" alt="sponsor-image">
-                                    </a>
+                                    {% if sponsor.sponsor_image %}
+                                        <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="post-link" target="_blank">
+                                            <img class="card-img-top" src="{{ sponsor.sponsor_image.url }}" alt="sponsor-image">
+                                        </a>
+                                    {% else %}
+                                        <a rel="nofollow" href="{{ sponsor.sponsor_website }}" class="post-link" target="_blank">
+                                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="sponsor-image">
+                                        </a>
+                                    {% endif %}
                                     <p>{{ sponsor.sponsor_bio }}</p>
                                 </div>
                                 <div class="card-footer">
