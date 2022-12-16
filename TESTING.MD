@@ -67,3 +67,27 @@ I undertook manual testing of functionality of the site to ensure a smooth user 
 
 * **Expected outcome:** Admins can use the CRUD functionality in the blog section to create, update and delete their own blog posts.
 * **Actual Outcome:** Pass - admins have CRUD fuctionality for the management of their own blog posts.
+
+## **Bugs and Fixes**
+
+* **Bug:** Checkout App - bad.request in /checkout/cache_checkout_data, webhook payment.intent gave 301err.
+* **Solution:** Typos ins checkout views.py file. Once resolved issue went.
+
+* **Bug:** Search - if class not found, there was no error message stating this.
+* **Solution:** Had to add an if sport, else statement to the sports.html template to resolve this.
+
+* **Bug:** Delete comment - when viewing delete_comment.html, if the user wishes to cancel this the back button returns an object error.
+* **Solution:** Had to use javascript for the href in the back to post button.
+
+* **Bug:** Post Like - liking a post results in SimpleLazyObject error.
+* **Solution:** This was because the model here was using UserProfile as a foreign key not User. In PostLike in views.py wherever the request was request.user, this had to become request.user.userprofile.
+
+### Unsolved Bugs
+
+Unfortunately I didn't have time to resolve all the bugs i encountered. The unsovlved bugs are below. Despite these, the site is fully functional.
+
+* **Bug:** Checkout App - full name is not saved into profile when the checkbox is ticked.
+* **Solution:** This bug is currently unsolved, so users have to manually enter their full name in the checkout billing details form.
+
+* **Bug:** Footer - on mobile the site links become untidy when trying to fit
+* **Solution:** This bug is currently unfixed. Unforuntately I couldn't solve this using css in the time given.
