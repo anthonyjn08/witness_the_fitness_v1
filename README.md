@@ -2,9 +2,16 @@
 
 [Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences.
 
-## Business Case
+## E-Commerce Business Model
 
-TBC
+Witness the Fitness is a B2C type application. The site will sell directly to consumers in small quantities.
+
+## Marketing Strategies.
+
+The concept for Witness the Fitness is a small, local fitness business offering various classes to the local community, therefore the budget for marketing is small.
+However, for this type of business where word of mouth is of paramount importance, the obvious choice for marketing is through social media. This will allow the business to be promoted on local community groups with paid options allowing targeted promotion to particular groups of people. A link to the Facebook business page can be found ![here](https://www.facebook.com/profile.php?id=100088622565648). The creation of other social media pages such as Twitter, Instagram and LinkedIn could also be considered.
+
+To keep registered users up to date with changes to the business and new promotions, a regular newsletter would be sent out via email. This would also provide a platform for sponsor information to be distributed to registered users. Signup for the newsletter works through a mailchimp form in the footer of the page.
 
 ## Planning
 
@@ -93,6 +100,15 @@ As an **Admin**
 * I can add new classes(products).
 * I can update/delete existing classes(products).
 * I can delete user blog comments if inappropriate.
+
+**Dropped User Stories**
+
+These user/admin user stories unfortunately were dropped due to time constraints.
+
+* As a user I can schedule lessons using a calendar.
+* As a user I can cancel scheduled lessons and rebook when convenient.
+* As a user I can use social platforms to register to the site.
+* As an admin I can cancel lessons and rebook when convenient.
 
 ## Database Models
 
