@@ -1,6 +1,8 @@
 # Witness The Fitness
 
-[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences.
+[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences. At time of writing Am I Responsive is down so I have provide desktop and mobile screen shots.
+![Desktop View](static/docs/images/ss-desktop.png)
+![Mobile View](static/docs/images/ss-mobile.png)
 
 ## E-Commerce Business Model
 
@@ -208,39 +210,51 @@ The sites design takes a lot of styling from the Code Institute Boutique Ado fol
 ### **Header and Footer**
 
 #### **Navbar**
+![Navbar](static/docs/images/ss-navbar.png)
 The navbar includes the site title, a search bar and links to various sections of the website including profiles and shopping bag. It is made up of bootstrap classes to aid responsiveness. The search bar allows users to search for the classes on the site.
 
 #### **Footer**
+![Footer](static/docs/images/ss-footer.png)
 The footer includes a message that the website is for educational purposes. It also features a mailchimp newsletter signup and links to the main areas of the website.
 
 ### **Homepage**
+![Homepage](static/docs/images/ss-desktop.png)
 The landing page has a background image which presents a fitness feel to the site. There is a message to join one of the availlable classes and also a shop now button so users can easily navigate to the classes on offer.
 
 ### **Classes**
+![Classes](static/docs/images/ss-classes.png)
 The classes page shows the classes on offer. It consists of a grid in rows of 4 cards. There is an image, category and price for each class on show. Users can click on a chosen class which will open up a more detailed page for that class.
 
 ### **Class Detail**
+![Classes Detail](static/docs/images/ss-class-detail.png)
 The class detail page is accessed when users click on a class in the classes view. This page has a large image for the class, the class category, price and a description of the class. Users can adjust the quantity they would like to purchase to a maximum limit of 5. There are also buttons to keep shopping and return to the classes page or to add the class to the bag in their chosen quantity. Adding an item to the bag reveals a toast popup which displays a message, highlights what's in the bag and a button to navigate to the checkout page.
 
 ### **Trainers**
+![Trainers](static/docs/images/ss-trainers.png)
 The trainers page shows the different trainers on the site and their sport category. It is presented in a card like view with a grid of 3 per row. As more trainers are added I would update this to display in rows of 4 to fit in with the styling on the rest of the site.
 
 ### **Trainer Detail**
+![Trainer Detail](static/docs/images/ss-trainer-detail.png)
 The trainer detail page is opened when a user clicks on a trainer in the trainers view. This view displays a larger image of the trainer, name, sport category and their bio.
 
 ### ** Blog**
+![Blog](static/docs/images/ss-blog.png)
 The blog page has similar styling to the products page in that each row is a grid of 4 cards. Each card has the post title, author, an image, a small excerpt and details on the date and amount of likes. There is a small message for registered users welcoming them to the blog. Users can view the blog posts, and if there are more than 6 posts on a page, there are buttons for next and previous pages.
 
 ### **Blog Post Detail**
+![Post Detail](static/docs/images/ss-post-detail.png)
 The post detail page opens up when a blog card is clicked on the blog view. This view has the title of the post and the author. There is an image and below there is the post content. At the bottom of this view users can view the amount of likes and comments on the post. Registered logged in users can then either like or unlike the post and also post their own comments. They can also delete their comments too.
 
 ### **Sponsors**
+![Sponsors](static/docs/images/ss-sponsors.png)
 The sponsors page is also in a grid and card format. This page shows the sponsors of the site and a small bio of who they are and where they're based. The is also a link to their website which uses a rel attribute.
 
 ### **My Profile**
+![Profile](static/docs/images/ss-my-profile.png)
 This page is accessed when registed users click on the my account icon in the header. The page is split into 2 sides. On the left hand side is their default billing information which can be updated here. On the right is the users order history. This displays the order number, date, items and total for the order. Users can click on an order number to see even more information for that order.
 
 ### **Bag**
+![Bag](static/docs/images/ss-bag.png)
 This page shows what is currently in the users shopping bag. If this is empty it displays a message stating this and has a keep shopping button to take users back to the classes page. If there are items in a users bag they are displayed here. There is an image, the class category and a description. To the right of the page, there is the price and also a quantity field with + and - buttons to update this. Users have the option to update the quantity of a specific item or remove it from the bag.
 
 ## **Future Features**
