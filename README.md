@@ -74,7 +74,7 @@ During the planning stage, I created several wireframe templates based on how I 
 
 ### User Stories
 
-As part of the Agile process I created user stories to aid with planning for the project.
+As part of the Agile process I created user stories to aid with planning for the project. Although these were added to the project board in the final stages of the project. They were written down on paper during my initial planning of the project.
 
 **User**
 
@@ -336,3 +336,9 @@ This project has been deployed on Heroku and developed in GitPod. Images and sta
 6. You will then need to make migrations using the - makemigration command. Add --dry-run to see a preview of what will be run.
 7. You will then need to migrate using the - migrate command. Add --plan to see a preview of what will be run.
 8. Use the command - "python3 manage.py runserver" to run locally.
+
+# Credits
+
+There are some people I'd like to thank. My mentor Richard Wells, who has helped me get through this course and sees a developer in me even though I currently don't see it in myself. Also my wife and children have been supportive over the past year, which was made even more difficult by myself becoming seriously ill with Covid.
+
+For the sponsors page, the info and images are taken from each sponsors website.
