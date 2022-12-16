@@ -84,10 +84,18 @@ I undertook manual testing of functionality of the site to ensure a smooth user 
 
 ### Unsolved Bugs
 
-Unfortunately I didn't have time to resolve all the bugs i encountered. The unsovlved bugs are below. Despite these, the site is fully functional.
+Unfortunately I didn't have time to resolve all the bugs I encountered. The unsovlved bugs are below. Despite these, the site is fully functional.
 
 * **Bug:** Checkout App - full name is not saved into profile when the checkbox is ticked.
 * **Solution:** This bug is currently unsolved, so users have to manually enter their full name in the checkout billing details form.
 
 * **Bug:** Footer - on mobile the site links become untidy when trying to fit
 * **Solution:** This bug is currently unfixed. Unforuntately I couldn't solve this using css in the time given.
+
+## **Validator Testing**
+
+**HTML**
+I have tested the HTML code using the [W3C HTML Validator](https://validator.w3.org/). The errors found were caused by the django curly braces {} and also using {% extends "base.html" %} in place of <"head"> tags.
+
+**CSS**
+I have tested the CSS code using the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) and found no errors.
