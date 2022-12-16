@@ -19,7 +19,7 @@
             <p>You are about to delete this comment, this cannot be undone.</p>
             <form method="POST" action="{% url 'delete_comment' comment.pk %}">
                 {% csrf_token %}
-                <button class="btn btn-outline-danger"><i
+                <button class="btn btn-outline-danger rounded-0"><i
                     class="fa-solid fa-dumpster"></i> Delete</button>
             </form>
         </div>
@@ -27,7 +27,7 @@
     {% else %}
     <p>You do not have permission to view this page.</p>
     <div class="container text-center">
-        <a href="{% url 'blog' %}" class="btn btn-danger btn-default">Back</a>
+        <a href="{% url 'blog' %}" class="btn btn-danger btn-default rounded-0">Back</a>
     </div>
     {% endif %}
 </div>

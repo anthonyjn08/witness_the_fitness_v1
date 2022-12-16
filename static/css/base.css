@@ -321,12 +321,6 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
-    
-
-    .site-links {
-        font-size: 0.5rem;
-    }
-
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
