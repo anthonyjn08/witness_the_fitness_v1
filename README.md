@@ -4,6 +4,9 @@
 ![Desktop View](static/docs/images/ss-desktop.png)
 ![Mobile View](static/docs/images/ss-mobile.png)
 
+## Site Testing
+A seperate TESTING.md file can be found [here](TESTING.MD). In this file I detail my testing and any bugs and fixes.
+
 ## E-Commerce Business Model
 
 Witness the Fitness is a B2C type application. The site will sell directly to consumers in small quantities.
@@ -303,3 +306,33 @@ There are also other features that I would like to include as I develop the site
 * [Pixabay](https://pixabay.com/) - images I've used on the site have come from Pixabay.
 * [Google Fonts](https://fonts.google.com/) - used for font's on the site.
 * [Font Awesome](https://fontawesome.com/) - used for icons across the site.
+
+## Deployment
+
+This project has been deployed on Heroku and developed in GitPod. Images and static files are hosted on Amazon AWS. ElephantSQL is used for the postgres database. To create a copy locally use the following steps.
+
+1. Create a repository in GitHub
+2. Open GitPod and use command - git clone https://github.com/anthonyjn08/witness_the_fitness_v1
+3. Run the command - pip3 install -r requirements.txt to install the required packages.
+4. Add the following to installed apps in settings.py
+    'django_summernote',
+    'home',
+    'trainers',
+    'profiles',
+    'blog',
+    'sports',
+    'sponsors',
+    'bag',
+    'checkout',
+    'crispy_forms',
+    'storages',
+5. Create an env.py folder with the following
+    os.environ["DATABASE_URL"] = "your postgresql url which you will find in elephantsql"
+    os.environ["SECRET_KEY"] = "your secret key which will added to heroku"
+    os.environ["CLOUDINARY_URL"] = "your cloudinary api"
+    os.environ["STRIPE_PUBLIC_KEY"] = "your stripe public key"
+    os.environ["STRIPE_SECRET_KEY"] = "your stripe secret key" *do not commit this github
+    os.environ["STRIPE_WH_SECRET"] = "your stripe wh secret key" *do not commit this github
+6. You will then need to make migrations using the - makemigration command. Add --dry-run to see a preview of what will be run.
+7. You will then need to migrate using the - migrate command. Add --plan to see a preview of what will be run.
+8. Use the command - "python3 manage.py runserver" to run locally.

@@ -9,72 +9,112 @@
 
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/accounts/login/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/bag/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/trainers/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/blog/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/sponsors/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/1/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/2/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/3/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/4/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/5/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/6/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/7/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/8/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/9/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/classes/10/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/trainers/hannah/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/trainers/scott/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://witness-the-fitness-ajn.herokuapp.com/trainers/trinity/</loc>
-  <lastmod>2022-12-14T22:34:53+00:00</lastmod>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://witness-the-fitness-ajn.herokuapp.com/blog/im-scared-of-boot-camp/</loc>
+  <lastmod>2022-12-16T11:07:44+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
