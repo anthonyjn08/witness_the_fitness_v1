@@ -38,9 +38,10 @@
     <!-- Likes Button -->
     <div class="row">
         <div class="col-1">
-            <strong>
-                {% if user.is_authenticated %}
-                <form action="{% url 'post_like' post.slug %}" class="d-inline" method="POST">
+            
+            {% if user.is_authenticated %}
+            <form action="{% url 'post_like' post.slug %}" class="d-inline" method="POST">
+                <strong>
                     {% csrf_token %}
                     {% if liked %}
                     <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn-like"><i
@@ -49,7 +50,9 @@
                     <button type="submit" name="blogpost_id" value="{{ post.slug }}" class="btn btn-like"><i
                             class="far fa-heart"></i></button>
                     {% endif %}
-                </form>
+                </strong>
+            </form>
+            <strong>
                 {% else %}
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
@@ -74,10 +77,10 @@
         <div class="col-6">
             <h5>Update or Delete your Post:</h5>
             <p class="edit-delete">
-                <a href="{% url 'edit_post' post.slug %}"><button class="btn btn-outline-success edit-recipe"><i
-                            class="fa-solid fa-pen-to-square"></i> Edit</button></i></a>
-                <a href="{% url 'delete_post' post.slug %}"><button class="btn btn-outline-danger"><i
-                            class="fa-solid fa-dumpster"></i> Delete</button></a>
+                <a href="{% url 'edit_post' post.slug %}" class="btn btn-outline-success rounded-0"><i
+                            class="fa-solid fa-pen-to-square"></i> Edit</a>
+                <a href="{% url 'delete_post' post.slug %}" class="btn btn-outline-danger rounded-0"><i
+                            class="fa-solid fa-dumpster"></i> Delete</a>
             </p>
         </div>
     </div>
@@ -101,8 +104,8 @@
                     {{ comment.body | linebreaks }}
                 </div>
                 {% if request.user == comment.name or request.user.is_superuser %}
-                <a href="{% url 'delete_comment' comment.id %}"><button class="btn btn-outline-danger"><i
-                    class="fa-solid fa-dumpster"></i> Delete</button></a>
+                <a href="{% url 'delete_comment' comment.id %}" class="btn btn-outline-danger rounded-0"><i
+                    class="fa-solid fa-dumpster"></i> Delete</a>
                 {% endif %}
                 {% endfor %}
             </div>
