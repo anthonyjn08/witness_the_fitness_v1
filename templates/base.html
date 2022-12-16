@@ -40,6 +40,7 @@
         <title>Witness The Fitness {% block extra_title %}{% endblock %}</title>
     </head>
     <body>
+        <!-- Header -->
         <header class="container-fluid fixed-top">
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -114,7 +115,8 @@
                 </nav>
             </div>
         </header>
-
+        
+        <!-- Messages -->
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
@@ -140,7 +142,7 @@
         {% endblock %}
 
         
-
+        <!-- Footer -->
         <footer class="container-fluid bg-white mt-auto">
             <hr>
             <div class="row">

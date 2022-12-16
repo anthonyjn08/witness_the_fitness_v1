@@ -271,8 +271,8 @@ input[name='q']::placeholder {
     position: absolute;
     top: 0;
     right: 0;
-    min-width: 100;
-    min-height: 100;
+    min-width: 100px;
+    min-height: 100px;
     opacity: 0;
     cursor: pointer;
 }
