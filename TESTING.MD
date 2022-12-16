@@ -94,6 +94,16 @@ Unfortunately I didn't have time to resolve all the bugs I encountered. The unso
 
 ## **Validator Testing**
 
+**Python**
+I used a [Code Institutes Python Linter](https://pep8ci.herokuapp.com/). There a couple instances where I received the line too long error but I didn't shorten the code as I didn't want to break it.
+
+* Checkout App models.py line 43.
+
+I also received an import unsed error which although true for that file, it is necessary for the checkout to work.
+
+* Checkout App apps.py line 9.
+* Checkout App webhooks.py line 43.
+
 **HTML**
 I have tested the HTML code using the [W3C HTML Validator](https://validator.w3.org/). The errors found were caused by the django curly braces {} and also using {% extends "base.html" %} in place of <"head"> tags.
 
