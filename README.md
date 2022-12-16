@@ -1,6 +1,6 @@
 # Witness The Fitness
 
-[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences.
+[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences.
 
 ## Business Case
 
@@ -198,10 +198,10 @@ The navbar includes the site title, a search bar and links to various sections o
 The footer includes a message that the website is for educational purposes. It also features a mailchimp newsletter signup and links to the main areas of the website.
 
 ### **Homepage**
-The landing page has a background image which presents a fitness feel to the site. There is a message to join one of the availlable classes and also a shopw now button so users can easily navigate to the classes on offer.
+The landing page has a background image which presents a fitness feel to the site. There is a message to join one of the availlable classes and also a shop now button so users can easily navigate to the classes on offer.
 
 ### **Classes**
-The classes page shows the classes on offer. It consists of a grid in rows of 4 cards. There is an image, category and price for each class on show. Users can click on a choosen class which will open up a more detailed page for that class.
+The classes page shows the classes on offer. It consists of a grid in rows of 4 cards. There is an image, category and price for each class on show. Users can click on a chosen class which will open up a more detailed page for that class.
 
 ### **Class Detail**
 The class detail page is accessed when users click on a class in the classes view. This page has a large image for the class, the class category, price and a description of the class. Users can adjust the quantity they would like to purchase to a maximum limit of 5. There are also buttons to keep shopping and return to the classes page or to add the class to the bag in their chosen quantity. Adding an item to the bag reveals a toast popup which displays a message, highlights what's in the bag and a button to navigate to the checkout page.
@@ -213,7 +213,7 @@ The trainers page shows the different trainers on the site and their sport categ
 The trainer detail page is opened when a user clicks on a trainer in the trainers view. This view displays a larger image of the trainer, name, sport category and their bio.
 
 ### ** Blog**
-The blog page has similar styling to the products page in that each row is a grid of 4 cards. Each card has the post title, author, an image, a small excerpt and details on the date and amount of likes. There is a small message for registered users welcoming them to the blog. Users can view the blog posts, and if there more than 6 posts on a page, there are buttons for next and previous pages.
+The blog page has similar styling to the products page in that each row is a grid of 4 cards. Each card has the post title, author, an image, a small excerpt and details on the date and amount of likes. There is a small message for registered users welcoming them to the blog. Users can view the blog posts, and if there are more than 6 posts on a page, there are buttons for next and previous pages.
 
 ### **Blog Post Detail**
 The post detail page opens up when a blog card is clicked on the blog view. This view has the title of the post and the author. There is an image and below there is the post content. At the bottom of this view users can view the amount of likes and comments on the post. Registered logged in users can then either like or unlike the post and also post their own comments. They can also delete their comments too.
