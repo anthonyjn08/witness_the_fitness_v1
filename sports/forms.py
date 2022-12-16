@@ -4,6 +4,7 @@ from .models import Sports
 
 
 class SportForm(forms.ModelForm):
+    """ Form to add new sports """
 
     class Meta:
         model = Sports
