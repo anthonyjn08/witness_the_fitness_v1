@@ -1,6 +1,6 @@
 # Witness The Fitness
 
-[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences. At time of writing Am I Responsive is down so I have provide desktop and mobile screen shots.
+[Witness The Fitness](https://witness-the-fitness-ajn.herokuapp.com/) (currently offline) is currently a fictional fitness website. It is for people intrested in fitness and wellbeing. The purpose of the website is to provide people with the chance to purchase different types of fitness experiences. At time of writing Am I Responsive is down so I have provide desktop and mobile screen shots.
 ![Desktop View](static/docs/images/ss-desktop.png)
 ![Mobile View](static/docs/images/ss-mobile.png)
 
